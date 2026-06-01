@@ -13,13 +13,13 @@ const PAW_SVG = (fill, size) => `
     C 80,54 66,52 60,56 Z
   " fill="${fill}"/>
   <!-- Dedo 1 — extremo izquierdo, más bajo y girado -->
-  <ellipse cx="14" cy="44" rx="9" ry="12" transform="rotate(-25 14 44)" fill="${fill}"/>
+  <ellipse cx="14" cy="44" rx="7" ry="9" transform="rotate(-25 14 44)" fill="${fill}"/>
   <!-- Dedo 2 — izquierda, más arriba -->
-  <ellipse cx="38" cy="22" rx="10" ry="13" transform="rotate(-8 38 22)"  fill="${fill}"/>
+  <ellipse cx="38" cy="22" rx="7" ry="9" transform="rotate(-8 38 22)"  fill="${fill}"/>
   <!-- Dedo 3 — derecha, mismo nivel -->
-  <ellipse cx="82" cy="22" rx="10" ry="13" transform="rotate(8 82 22)"   fill="${fill}"/>
+  <ellipse cx="82" cy="22" rx="7" ry="9" transform="rotate(8 82 22)"   fill="${fill}"/>
   <!-- Dedo 4 — extremo derecho, más bajo y girado -->
-  <ellipse cx="106" cy="44" rx="9" ry="12" transform="rotate(25 106 44)" fill="${fill}"/>
+  <ellipse cx="106" cy="44" rx="7" ry="9" transform="rotate(25 106 44)" fill="${fill}"/>
 </svg>`;
 
 const container = document.getElementById('paws');

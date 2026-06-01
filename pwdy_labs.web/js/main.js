@@ -1,18 +1,18 @@
-// Fade-in on scroll
+// Scroll reveal
 const observer = new IntersectionObserver(
-  (entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
-  { threshold: 0.12 }
+  (entries) => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  }),
+  { threshold: 0.1 }
 );
 
-document.querySelectorAll('.card, .stat, .about__right p').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity .6s ease, transform .6s ease';
+document.querySelectorAll(
+  '.product-card, .testimonial-card, .stat-card, .science-step, .about__copy p, .hero__content > *'
+).forEach((el, i) => {
+  el.setAttribute('data-reveal', '');
+  el.style.transitionDelay = `${i * 60}ms`;
   observer.observe(el);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const style = document.createElement('style');
-  style.textContent = '.visible { opacity: 1 !important; transform: none !important; }';
-  document.head.appendChild(style);
 });

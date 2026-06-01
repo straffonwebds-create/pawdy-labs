@@ -3,120 +3,276 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pawdy Labs</title>
+  <title>Pawdy Labs — Science-backed pet care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <!-- PAW PRINT BACKGROUND -->
+  <div class="paw-bg" aria-hidden="true">
+    <svg class="paw-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="44" rx="12" ry="9"/>
+      <ellipse cx="16" cy="30" rx="6" ry="8"/>
+      <ellipse cx="48" cy="30" rx="6" ry="8"/>
+      <ellipse cx="22" cy="18" rx="5" ry="6.5"/>
+      <ellipse cx="42" cy="18" rx="5" ry="6.5"/>
+    </svg>
+  </div>
+
   <!-- NAV -->
   <nav class="nav">
-    <div class="nav__logo">
-      <span class="logo-mark">P</span>
-      <span class="logo-text">awdy Labs</span>
-    </div>
+    <a href="#" class="nav__logo">
+      <img src="assets/logo.svg" alt="Pawdy Labs" class="nav__logo-img" onerror="this.style.display='none'" />
+      <span class="nav__logo-text">PawdyLab</span>
+    </a>
     <ul class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#products">Productos</a></li>
+      <li><a href="#science">Ciencia</a></li>
+      <li><a href="#contact">Contacto</a></li>
     </ul>
+    <a href="#contact" class="btn btn--primary nav__cta">Empezar</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Design &amp; Technology Studio</p>
-      <h1 class="hero__title">
-        We build things<br />
-        <span class="hero__accent">worth noticing.</span>
-      </h1>
-      <p class="hero__sub">
-        Pawdy Labs crafts digital products, brand identities,<br />
-        and experiences that leave a mark.
-      </p>
-      <a href="#work" class="btn btn--primary">See our work</a>
-    </div>
-    <div class="hero__visual">
-      <div class="blob"></div>
-      <div class="grid-pattern"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__left">
-          <span class="label">Who we are</span>
-          <h2 class="section-title">A small lab.<br />Big ideas.</h2>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="chip">Cuidado premium para mascotas 🐾</div>
+        <h1 class="hero__title">
+          Ciencia y amor<br />en cada mordida.
+        </h1>
+        <p class="hero__body">
+          En Pawdy Labs formulamos suplementos y alimentos funcionales
+          respaldados por ciencia, diseñados para que tu mascota viva
+          más tiempo y con mejor calidad de vida.
+        </p>
+        <div class="hero__actions">
+          <a href="#products" class="btn btn--primary">Ver productos</a>
+          <a href="#science" class="btn btn--secondary">Nuestra ciencia →</a>
         </div>
-        <div class="about__right">
-          <p>
-            We're a studio obsessed with the intersection of design and
-            engineering. Every pixel, every interaction, every line of code
-            is crafted with intention.
-          </p>
-          <p>
-            We partner with startups and forward-thinking companies to
-            ship products that people actually love.
-          </p>
-          <div class="stats">
-            <div class="stat"><span class="stat__num">40+</span><span class="stat__label">Projects delivered</span></div>
-            <div class="stat"><span class="stat__num">12</span><span class="stat__label">Happy clients</span></div>
-            <div class="stat"><span class="stat__num">3</span><span class="stat__label">Years running</span></div>
-          </div>
+      </div>
+      <div class="hero__image-wrap">
+        <div class="hero__image-blob">
+          <div class="hero__placeholder">🐶</div>
+        </div>
+        <div class="floating-badge floating-badge--1">
+          <span class="badge-num">98%</span>
+          <span class="badge-label">Aceptación</span>
+        </div>
+        <div class="floating-badge floating-badge--2">
+          <span class="badge-num">Vet</span>
+          <span class="badge-label">Aprobado</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="work" id="work">
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container trust-bar__inner">
+      <span class="trust-item">🔬 Formulado por veterinarios</span>
+      <span class="trust-divider"></span>
+      <span class="trust-item">🌿 Ingredientes naturales</span>
+      <span class="trust-divider"></span>
+      <span class="trust-item">🧪 Pruebas clínicas</span>
+      <span class="trust-divider"></span>
+      <span class="trust-item">📦 Envío gratis +$500</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__visual">
+        <div class="about__card-stack">
+          <div class="stat-card">
+            <span class="stat-card__num">+12k</span>
+            <span class="stat-card__label">Mascotas felices</span>
+          </div>
+          <div class="stat-card stat-card--2">
+            <span class="stat-card__num">100%</span>
+            <span class="stat-card__label">Natural</span>
+          </div>
+          <div class="stat-card stat-card--3">
+            <span class="stat-card__num">3 años</span>
+            <span class="stat-card__label">De investigación</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__copy">
+        <div class="chip">Quiénes somos</div>
+        <h2 class="section-title">Cuidado de mascotas<br />redefinido.</h2>
+        <p class="body-text">
+          Pawdy Labs nació de una obsesión: entender qué necesita realmente
+          una mascota para prosperar. No lo que vende bien — lo que
+          funciona de verdad.
+        </p>
+        <p class="body-text">
+          Nuestro equipo de veterinarios, nutricionistas y biotecnólogos
+          desarrolla cada fórmula con rigor científico y una dosis
+          honesta de amor por los animales.
+        </p>
+        <a href="#science" class="btn btn--secondary">Conoce al equipo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
     <div class="container">
-      <span class="label">Selected work</span>
-      <h2 class="section-title">What we've built.</h2>
-      <div class="cards">
-        <article class="card card--1">
-          <div class="card__tag">Brand + Web</div>
-          <h3 class="card__title">Velora</h3>
-          <p class="card__desc">Full brand identity and e-commerce platform for a sustainable fashion label.</p>
-          <a href="#" class="card__link">View case →</a>
+      <div class="section-header">
+        <div class="chip">Catálogo</div>
+        <h2 class="section-title">Nuestros productos.</h2>
+      </div>
+      <div class="products__grid">
+        <article class="product-card">
+          <div class="product-card__image">🦴</div>
+          <div class="product-card__body">
+            <div class="chip chip--sm">Suplemento</div>
+            <h3 class="product-card__title">Flex & Joint</h3>
+            <p class="product-card__desc">
+              Glucosamina, colágeno tipo II y cúrcuma para articulaciones
+              sanas y movilidad óptima.
+            </p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$349 MXN</span>
+              <a href="#" class="btn btn--primary btn--sm">Agregar</a>
+            </div>
+          </div>
         </article>
-        <article class="card card--2">
-          <div class="card__tag">Product Design</div>
-          <h3 class="card__title">Crestline</h3>
-          <p class="card__desc">Dashboard and data visualization for a B2B SaaS analytics product.</p>
-          <a href="#" class="card__link">View case →</a>
+        <article class="product-card product-card--featured">
+          <div class="product-card__badge">Más vendido</div>
+          <div class="product-card__image">🌟</div>
+          <div class="product-card__body">
+            <div class="chip chip--sm">Suplemento</div>
+            <h3 class="product-card__title">Daily Vitals</h3>
+            <p class="product-card__desc">
+              Multivitamínico completo formulado para perros adultos.
+              Omega-3, probióticos y vitaminas esenciales.
+            </p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$429 MXN</span>
+              <a href="#" class="btn btn--primary btn--sm">Agregar</a>
+            </div>
+          </div>
         </article>
-        <article class="card card--3">
-          <div class="card__tag">Development</div>
-          <h3 class="card__title">Orbix</h3>
-          <p class="card__desc">Real-time collaboration tool built for remote design teams.</p>
-          <a href="#" class="card__link">View case →</a>
+        <article class="product-card">
+          <div class="product-card__image">🐟</div>
+          <div class="product-card__body">
+            <div class="chip chip--sm">Nutrición</div>
+            <h3 class="product-card__title">Omega Coat</h3>
+            <p class="product-card__desc">
+              Aceite de salmón de alta pureza para un pelaje brillante
+              y piel sana. Sin aditivos artificiales.
+            </p>
+            <div class="product-card__footer">
+              <span class="product-card__price">$299 MXN</span>
+              <a href="#" class="btn btn--primary btn--sm">Agregar</a>
+            </div>
+          </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="science" id="science">
+    <div class="container science__inner">
+      <div class="chip chip--dark">Nuestro proceso</div>
+      <h2 class="section-title">De la investigación<br />a tu mascota.</h2>
+      <div class="science__steps">
+        <div class="science-step">
+          <span class="science-step__num">01</span>
+          <h4 class="science-step__title">Investigación</h4>
+          <p class="science-step__desc">Revisamos la evidencia científica más reciente en nutrición animal.</p>
+        </div>
+        <div class="science-step__arrow">→</div>
+        <div class="science-step">
+          <span class="science-step__num">02</span>
+          <h4 class="science-step__title">Formulación</h4>
+          <p class="science-step__desc">Nuestros veterinarios diseñan fórmulas con dosis clínicamente validadas.</p>
+        </div>
+        <div class="science-step__arrow">→</div>
+        <div class="science-step">
+          <span class="science-step__num">03</span>
+          <h4 class="science-step__title">Pruebas</h4>
+          <p class="science-step__desc">Cada lote pasa por análisis de pureza, potencia y seguridad.</p>
+        </div>
+        <div class="science-step__arrow">→</div>
+        <div class="science-step">
+          <span class="science-step__num">04</span>
+          <h4 class="science-step__title">Entrega</h4>
+          <p class="science-step__desc">Llega directo a tu puerta con trazabilidad completa del producto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="chip">Testimonios</div>
+      <h2 class="section-title">Lo que dicen nuestros<br />clientes.</h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial-card">
+          <p>"Desde que le doy Daily Vitals a Luna, su pelaje está increíble y tiene mucha más energía. Totalmente recomendado."</p>
+          <footer>
+            <strong>María G.</strong> — Golden Retriever, 4 años
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Mi veterinaria me lo recomendó y la diferencia en las articulaciones de Max fue visible desde el primer mes."</p>
+          <footer>
+            <strong>Carlos P.</strong> — Labrador, 8 años
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Que un producto esté formulado con evidencia científica real me da mucha confianza. Es lo que buscaba."</p>
+          <footer>
+            <strong>Andrea M.</strong> — Border Collie, 2 años
+          </footer>
+        </blockquote>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact__inner">
-        <span class="label label--light">Let's talk</span>
-        <h2 class="section-title section-title--light">Got a project in mind?</h2>
-        <p class="contact__sub">Tell us what you're building. We'd love to help.</p>
-        <a href="mailto:hello@pawdylabs.com" class="btn btn--white">hello@pawdylabs.com</a>
-      </div>
+    <div class="container contact__inner">
+      <div class="chip">Contacto</div>
+      <h2 class="section-title">¿Tienes dudas?<br />Escríbenos.</h2>
+      <p class="body-text contact__sub">
+        Nuestro equipo de veterinarios responde en menos de 24 horas.
+      </p>
+      <form class="contact__form" onsubmit="return false">
+        <div class="form-group">
+          <label class="form-label" for="name">Nombre</label>
+          <input class="form-input" type="text" id="name" placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Correo</label>
+          <input class="form-input" type="email" id="email" placeholder="tu@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="msg">Mensaje</label>
+          <textarea class="form-input form-textarea" id="msg" placeholder="¿En qué podemos ayudarte?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__brand">Pawdy Labs © 2026</span>
+      <span class="footer__brand">© 2024 PAWDY LABS.</span>
       <div class="footer__links">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Dribbble</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
       </div>
     </div>
   </footer>

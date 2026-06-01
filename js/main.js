@@ -1,11 +1,16 @@
 // ─── PAW PRINT GENERATOR ───
 const PAW_SVG = (fill, size) => `
-<svg width="${size}" height="${size}" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="32" cy="44" rx="12" ry="9"   fill="${fill}"/>
-  <ellipse cx="16" cy="30" rx="6"  ry="8"   fill="${fill}"/>
-  <ellipse cx="48" cy="30" rx="6"  ry="8"   fill="${fill}"/>
-  <ellipse cx="22" cy="18" rx="5"  ry="6.5" fill="${fill}"/>
-  <ellipse cx="42" cy="18" rx="5"  ry="6.5" fill="${fill}"/>
+<svg width="${size}" height="${size}" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Almohadilla central -->
+  <ellipse cx="40" cy="54" rx="16" ry="13" fill="${fill}"/>
+  <!-- Dedo 1 (izquierda exterior) -->
+  <ellipse cx="16" cy="38" rx="7" ry="9" transform="rotate(-20 16 38)" fill="${fill}"/>
+  <!-- Dedo 2 (izquierda interior) -->
+  <ellipse cx="28" cy="26" rx="7" ry="9" transform="rotate(-8 28 26)"  fill="${fill}"/>
+  <!-- Dedo 3 (derecha interior) -->
+  <ellipse cx="52" cy="26" rx="7" ry="9" transform="rotate(8 52 26)"   fill="${fill}"/>
+  <!-- Dedo 4 (derecha exterior) -->
+  <ellipse cx="64" cy="38" rx="7" ry="9" transform="rotate(20 64 38)"  fill="${fill}"/>
 </svg>`;
 
 const container = document.getElementById('paws');

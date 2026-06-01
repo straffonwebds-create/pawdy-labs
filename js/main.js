@@ -4,22 +4,22 @@ const PAW_SVG = (fill, size) => `
   <!-- Almohadilla central — forma de la imagen de referencia:
        ancha en la base, se estrecha hacia arriba, lados curvados orgánicos -->
   <path d="
-    M 60,56
-    C 54,52 40,54 30,64
-    C 18,76 16,96 24,110
-    C 30,120 44,126 60,124
-    C 76,126 90,120 96,110
-    C 104,96 102,76 90,64
-    C 80,54 66,52 60,56 Z
+    M 60,64
+    C 55,61 44,63 36,71
+    C 27,80 26,96 32,107
+    C 37,115 48,119 60,118
+    C 72,119 83,115 88,107
+    C 94,96 93,80 84,71
+    C 76,63 65,61 60,64 Z
   " fill="${fill}"/>
-  <!-- Dedo 1 — extremo izquierdo, más bajo y girado -->
-  <ellipse cx="14" cy="44" rx="7" ry="9" transform="rotate(-25 14 44)" fill="${fill}"/>
-  <!-- Dedo 2 — izquierda, más arriba -->
-  <ellipse cx="38" cy="22" rx="7" ry="9" transform="rotate(-8 38 22)"  fill="${fill}"/>
-  <!-- Dedo 3 — derecha, mismo nivel -->
-  <ellipse cx="82" cy="22" rx="7" ry="9" transform="rotate(8 82 22)"   fill="${fill}"/>
-  <!-- Dedo 4 — extremo derecho, más bajo y girado -->
-  <ellipse cx="106" cy="44" rx="7" ry="9" transform="rotate(25 106 44)" fill="${fill}"/>
+  <!-- Dedo 1 — extremo izquierdo -->
+  <ellipse cx="13" cy="47" rx="9" ry="12" transform="rotate(-25 13 47)" fill="${fill}"/>
+  <!-- Dedo 2 — izquierda -->
+  <ellipse cx="37" cy="22" rx="9" ry="12" transform="rotate(-8 37 22)"  fill="${fill}"/>
+  <!-- Dedo 3 — derecha -->
+  <ellipse cx="83" cy="22" rx="9" ry="12" transform="rotate(8 83 22)"   fill="${fill}"/>
+  <!-- Dedo 4 — extremo derecho -->
+  <ellipse cx="107" cy="47" rx="9" ry="12" transform="rotate(25 107 47)" fill="${fill}"/>
 </svg>`;
 
 const container = document.getElementById('paws');

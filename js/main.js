@@ -1,15 +1,15 @@
 // ─── PAW PRINT GENERATOR ───
 const PAW_SVG = (fill, size) => `
 <svg width="${size}" height="${size}" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
-  <!-- Almohadilla central — forma orgánica irregular -->
+  <!-- Almohadilla central — triángulo redondeado, vértice arriba -->
   <path d="
-    M 60,55
-    C 38,52 18,58 14,74
-    C 10,90 18,110 35,118
-    C 45,123 55,122 60,120
-    C 65,122 75,123 85,118
-    C 102,110 110,90 106,74
-    C 102,58 82,52 60,55 Z
+    M 60,60
+    C 55,58 48,60 42,68
+    C 34,78 32,96 38,108
+    C 43,116 53,118 60,117
+    C 67,118 77,116 82,108
+    C 88,96 86,78 78,68
+    C 72,60 65,58 60,60 Z
   " fill="${fill}"/>
   <!-- Dedo 1 — extremo izquierdo -->
   <ellipse cx="16" cy="42" rx="10" ry="13" transform="rotate(-22 16 42)" fill="${fill}"/>

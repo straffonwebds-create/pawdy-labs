@@ -1,0 +1,196 @@
+/* ─── TOKENS ─── */
+:root {
+  --bg:            #eae2cf;
+  --on-surface:    #1f1b10;
+  --on-surface-var:#49473e;
+  --outline-var:   #cbc6bb;
+  --liver:         #7a3d31;
+  --liver-light:   #c9a89e;
+  --font-display:  'Paytone One', sans-serif;
+  --font-body:     'Poppins', system-ui, sans-serif;
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+/* ─── PAW PRINTS BACKGROUND ─── */
+.paws {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.paw {
+  position: absolute;
+  opacity: 0;
+  animation: paw-drift linear infinite;
+}
+
+.paw svg { display: block; }
+
+@keyframes paw-drift {
+  0%   { transform: translateY(0)   rotate(var(--rot)) scale(var(--sc)); opacity: 0; }
+  8%   { opacity: var(--op); }
+  92%  { opacity: var(--op); }
+  100% { transform: translateY(-60px) rotate(calc(var(--rot) + 10deg)) scale(var(--sc)); opacity: 0; }
+}
+
+/* ─── HEADER ─── */
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 22px 32px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo__box {
+  width: 36px; height: 36px;
+  background: #fff;
+  border: 1px solid var(--outline-var);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+}
+
+.logo__text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--on-surface);
+  letter-spacing: -.01em;
+}
+
+/* ─── MAIN ─── */
+.main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding-bottom: 40px;
+}
+
+/* ─── SPINNER ─── */
+.spinner {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.spinner__ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+
+/* Dashes around the ring using conic gradient trick + individual ticks */
+.spinner__ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--liver)        0deg   20deg,
+    transparent        20deg  40deg,
+    #b07060            40deg  60deg,
+    transparent        60deg  80deg,
+    #c09080            80deg  100deg,
+    transparent        100deg 120deg,
+    var(--liver-light) 120deg 140deg,
+    transparent        140deg 160deg,
+    #d4b8b0            160deg 180deg,
+    transparent        180deg 200deg,
+    #e0ccc8            200deg 220deg,
+    transparent        220deg 240deg,
+    #e8d8d4            240deg 260deg,
+    transparent        260deg 280deg,
+    #edddd8            280deg 300deg,
+    transparent        300deg 320deg,
+    #f0e2de            320deg 340deg,
+    transparent        340deg 360deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 68px, black 68px);
+  mask: radial-gradient(circle, transparent 68px, black 68px);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── TEXT ─── */
+.loading-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--liver);
+  margin-bottom: 8px;
+  animation: fade-in .8s ease both;
+}
+
+.coming-soon {
+  font-size: .95rem;
+  color: var(--on-surface-var);
+  font-weight: 400;
+  animation: fade-in .8s .2s ease both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+}
+
+.footer__copy {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--on-surface-var);
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__links a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--on-surface-var);
+  text-decoration: none;
+  transition: color .2s;
+}
+.footer__links a:hover { color: var(--on-surface); }

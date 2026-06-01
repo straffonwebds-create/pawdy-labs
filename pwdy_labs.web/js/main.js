@@ -1,18 +1,24 @@
 // ─── PAW PRINT GENERATOR ───
 const PAW_SVG = (fill, size) => `
-<svg width="${size}" height="${size}" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-  <!-- Almohadilla central -->
-  <ellipse cx="45" cy="62" rx="17" ry="14" fill="${fill}"/>
+<svg width="${size}" height="${size}" viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg">
+  <!-- Almohadilla central — forma orgánica irregular -->
+  <path d="
+    M 60,55
+    C 38,52 18,58 14,74
+    C 10,90 18,110 35,118
+    C 45,123 55,122 60,120
+    C 65,122 75,123 85,118
+    C 102,110 110,90 106,74
+    C 102,58 82,52 60,55 Z
+  " fill="${fill}"/>
   <!-- Dedo 1 — extremo izquierdo -->
-  <ellipse cx="11" cy="48" rx="6" ry="8" transform="rotate(-32 11 48)" fill="${fill}"/>
+  <ellipse cx="16" cy="42" rx="10" ry="13" transform="rotate(-22 16 42)" fill="${fill}"/>
   <!-- Dedo 2 — izquierda -->
-  <ellipse cx="24" cy="28" rx="6" ry="8" transform="rotate(-14 24 28)" fill="${fill}"/>
-  <!-- Dedo 3 — centro -->
-  <ellipse cx="45" cy="21" rx="6" ry="8"                               fill="${fill}"/>
-  <!-- Dedo 4 — derecha -->
-  <ellipse cx="66" cy="28" rx="6" ry="8" transform="rotate(14 66 28)"  fill="${fill}"/>
-  <!-- Dedo 5 — extremo derecho -->
-  <ellipse cx="79" cy="48" rx="6" ry="8" transform="rotate(32 79 48)"  fill="${fill}"/>
+  <ellipse cx="40" cy="24" rx="11" ry="14" transform="rotate(-8 40 24)"  fill="${fill}"/>
+  <!-- Dedo 3 — derecha -->
+  <ellipse cx="80" cy="24" rx="11" ry="14" transform="rotate(8 80 24)"   fill="${fill}"/>
+  <!-- Dedo 4 — extremo derecho -->
+  <ellipse cx="104" cy="42" rx="10" ry="13" transform="rotate(22 104 42)" fill="${fill}"/>
 </svg>`;
 
 const container = document.getElementById('paws');
